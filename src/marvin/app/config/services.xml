@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<container>
+    
+    <!-- Services declaration of : Demo application -->
+    
+    <parameters>
+    </parameters>
+    
+    <services>
+ 
+        <service id="home" class="marvin.demo.view.Home">
+            <argument type="service" ref="action_handler" />
+        </service>
+
+        <service id="test" class="marvin.demo.view.Test">
+            <argument type="service" ref="action_handler" />
+        </service>
+
+    </services>
+</container>

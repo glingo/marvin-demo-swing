@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    
+    <import resource="parameters.xml" />
+    <import resource="services.xml" />
+    
+    <framework>
+        <router>
+            <resource>%kernel.root_dir%/config/routing.xml</resource>
+        </router>
+    </framework>
+    
+</configuration>

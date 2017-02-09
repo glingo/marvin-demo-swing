@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    
+    <import resource="config.xml" />
+    
+    <framework>
+        <router>
+            <resource>%kernel.root_dir%/config/routing_dev.xml</resource>
+        </router>
+    </framework>
+    
+</configuration>
