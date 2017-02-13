@@ -5,7 +5,6 @@ import com.marvin.component.kernel.bundle.Bundle;
 import com.marvin.bundle.debug.DebugBundle;
 import com.marvin.bundle.framework.FrameworkBundle;
 import com.marvin.bundle.swing.SwingBundle;
-import com.marvin.component.container.IContainer;
 import marvin.demo.DemoBundle;
 import marvin.nn.NeuralNetworkBundle;
 import marvin.test.TestBundle;
@@ -30,13 +29,5 @@ public class AppKernel extends Kernel {
             new TestBundle(),
             new NeuralNetworkBundle(),
         };
-    }
-    
-    public static void main(String[] args) {
-        Kernel kernel = new AppKernel("dev", true);
-        kernel.boot();
-        
-        IContainer container = kernel.getContainer();
-        container.getClass();
     }
 }
