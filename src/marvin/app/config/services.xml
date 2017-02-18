@@ -7,6 +7,10 @@
     </parameters>
     
     <services>
+        
+        <service id="application" class="marvin.demo.view.Home">
+            <argument type="service" ref="action_handler" />
+        </service>
  
         <service id="home" class="marvin.demo.view.Home">
             <argument type="service" ref="action_handler" />

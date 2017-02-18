@@ -1,7 +1,6 @@
 package marvin;
 
 import com.marvin.bundle.swing.Application;
-import com.marvin.bundle.swing.utils.SwingUtils;
 import com.marvin.component.kernel.Kernel;
 import java.util.Arrays;
 import javax.swing.JMenu;
@@ -22,26 +21,25 @@ public class DemoApplication extends Application {
                 .filter(arg -> arg.startsWith(ENV_PARAMETER_PREFIX))
                 .findFirst().orElse("-env=dev")
                 .replace(ENV_PARAMETER_PREFIX, "");
-        SwingUtils.launch(DemoApplication.class, new AppKernel(env, true));
+        Application.launch(DemoApplication.class, new AppKernel(env, true));
     }
     
     @Override
-    protected JMenuBar createMenu() {
-        JMenuBar menuBar = new JMenuBar();
+    protected JMenuBar createMenu(JMenuBar menuBar) {
         JMenu menu              = new JMenu("Demo");
         JMenuItem home          = new JMenuItem(createAction("home_action", "/"));
         JMenuItem view          = new JMenuItem(createAction("view_action", "/demo/view"));
         JMenuItem model         = new JMenuItem(createAction("model_action", "/demo/model"));
         JMenuItem modelandview  = new JMenuItem(createAction("model_and_view_action", "/demo/modelandview"));
         JMenuItem modelmap      = new JMenuItem(createAction("model_as_map_action", "/demo/modelmap"));
-        
+
         menu.add(home);
         menu.add(view);
         menu.add(model);
         menu.add(modelandview);
         menu.add(modelmap);
-        menuBar.add(menu);
         
+        menuBar.add(menu);
         return menuBar;
     }
     
