@@ -11,6 +11,10 @@
         <default key="_controller">marvin.app.controller.DefaultController::test</default>
     </route>
     
+    <route name="default.login" path="/login">
+        <default key="_controller">marvin.app.controller.DefaultController::login</default>
+    </route>
+    
     <import resource="/marvin/demo/resources/config/routing.xml" prefix="/demo" />
 
     <!-- Import debug routes -->

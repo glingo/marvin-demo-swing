@@ -32,6 +32,9 @@ public class DemoApplication extends Application {
         JMenuItem model         = new JMenuItem(createAction("model_action", "/demo/model"));
         JMenuItem modelandview  = new JMenuItem(createAction("model_and_view_action", "/demo/modelandview"));
         JMenuItem modelmap      = new JMenuItem(createAction("model_as_map_action", "/demo/modelmap"));
+        
+        JMenuItem login          = new JMenuItem(createAction("login", "/login"));
+        menuBar.add(login);
 
         menu.add(home);
         menu.add(view);
@@ -42,5 +45,4 @@ public class DemoApplication extends Application {
         menuBar.add(menu);
         return menuBar;
     }
-    
 }

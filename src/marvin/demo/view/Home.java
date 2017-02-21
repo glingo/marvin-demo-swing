@@ -1,37 +1,31 @@
 package marvin.demo.view;
 
 import com.marvin.bundle.framework.handler.Handler;
-import com.marvin.bundle.swing.ApplicationAction;
-import com.marvin.bundle.swing.resources.view.AbstractSwingView;
+import com.marvin.bundle.swing.action.ApplicationAction;
+import com.marvin.bundle.swing.resources.view.SwingView;
 import java.awt.Container;
 import java.util.HashMap;
 import javax.swing.Action;
 import javax.swing.JButton;
-import javax.swing.JPanel;
+import javax.swing.JFrame;
 
-public class Home extends AbstractSwingView {
-    
-    private final Handler handler;
-    
-    private JPanel panel;
+public class Home extends SwingView {
     private JButton button;
 
     public Home(Handler handler) {
-        this.handler = handler;
+        super(handler);
     }
 
     @Override
-    protected void prepare(HashMap<String, ?> model, Container pane) {
-        this.panel = new JPanel();
-        Action coucou = new ApplicationAction("Coucou", "/test", this.handler, pane);
+    protected void prepare(HashMap<String, ?> model, JFrame frame) {
+        Action coucou = new ApplicationAction("Coucou", "/test", getHandler(), frame);
         this.button = new JButton(coucou);
-        this.panel.add(this.button);
+        this.getPanel().add(this.button);
     }
 
     @Override
-    protected void display(HashMap<String, ?> model, Container pane) {
-        pane.removeAll();
-        pane.add(this.panel);
-        pane.repaint();
+    protected void display(HashMap<String, ?> model, JFrame frame) {
+        frame.getContentPane().removeAll();
+        super.display(model, frame);
     }
 }
