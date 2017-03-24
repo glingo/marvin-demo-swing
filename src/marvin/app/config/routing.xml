@@ -16,6 +16,8 @@
     </route>
     
     <import resource="/marvin/demo/resources/config/routing.xml" prefix="/demo" />
+    <import resource="/com/marvin/bundle/addressbook/resources/config/routing.xml" prefix="/addressbook" />
+    <import resource="/com/marvin/bundle/game/resources/config/routing.xml" prefix="/game" />
 
     <!-- Import debug routes -->
     <!--<import resource="/com/marvin/bundle/debug/resources/config/routing.xml" />-->

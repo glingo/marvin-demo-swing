@@ -26,6 +26,14 @@ public class DemoApplication extends Application {
     
     @Override
     protected JMenuBar createMenu(JMenuBar menuBar) {
+        menuBar.add(createUserMenu());
+        menuBar.add(createDemoMenu());
+        menuBar.add(createAddressBookMenu());
+        menuBar.add(createGameMenu());
+        return menuBar;
+    }
+    
+    private JMenu createDemoMenu() {
         JMenu menu              = new JMenu("Demo");
         JMenuItem home          = new JMenuItem(createAction("home_action", "/"));
         JMenuItem view          = new JMenuItem(createAction("view_action", "/demo/view"));
@@ -33,16 +41,38 @@ public class DemoApplication extends Application {
         JMenuItem modelandview  = new JMenuItem(createAction("model_and_view_action", "/demo/modelandview"));
         JMenuItem modelmap      = new JMenuItem(createAction("model_as_map_action", "/demo/modelmap"));
         
-        JMenuItem login          = new JMenuItem(createAction("login", "/login"));
-        menuBar.add(login);
-
         menu.add(home);
         menu.add(view);
         menu.add(model);
         menu.add(modelandview);
         menu.add(modelmap);
         
-        menuBar.add(menu);
-        return menuBar;
+        return menu;
+    }
+    
+    private JMenu createUserMenu() {
+        JMenu menu = new JMenu("User");
+        JMenuItem login = new JMenuItem(createAction("login", "/login"));
+        menu.add(login);
+        
+        return menu;
+    }
+    
+    private JMenu createAddressBookMenu() {
+        JMenu menu = new JMenu("Address book");
+        
+        JMenuItem addressBook = new JMenuItem(createAction("persons", "/addressbook/"));
+        menu.add(addressBook);
+        
+        return menu;
+    }
+    
+    private JMenu createGameMenu() {
+        JMenu menu = new JMenu("Game");
+        
+        JMenuItem games = new JMenuItem(createAction("games", "/game/"));
+        menu.add(games);
+        
+        return menu;
     }
 }

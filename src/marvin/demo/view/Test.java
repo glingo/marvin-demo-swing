@@ -3,28 +3,29 @@ package marvin.demo.view;
 import com.marvin.bundle.framework.handler.Handler;
 import com.marvin.bundle.swing.resources.view.SwingView;
 import java.awt.Color;
-import java.awt.Container;
 import java.util.HashMap;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
 public class Test extends SwingView {
 
+    private JLabel label;
+    
     public Test(Handler handler) {
         super(handler);
     }
 
     @Override
-    protected void prepare(HashMap<String, ?> model, JFrame frame) {
-        this.getPanel().add(new JLabel("Bonjour le monde"));
-        this.getPanel().setBackground(Color.BLUE);
-//        pane.setBackground(Color.red);
-//        pane.setSize(300, 300);
+    protected void prepare(HashMap<String, Object> model, JFrame frame) {
+        this.label = new JLabel("Bonjour le monde");
     }
 
     @Override
-    protected void display(HashMap<String, ?> model, JFrame frame) {
+    protected void display(HashMap<String, Object> model, JFrame frame) {
         frame.getContentPane().removeAll();
+        background(Color.BLUE)
+            .size(300, 300)
+            .add(this.label);
         super.display(model, frame);
     }
 }
