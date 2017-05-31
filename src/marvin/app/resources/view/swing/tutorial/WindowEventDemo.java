@@ -1,4 +1,4 @@
-package marvin.demo.tutorial;
+package marvin.app.resources.view.swing.tutorial;
 
 /*
  * WindowEventDemo

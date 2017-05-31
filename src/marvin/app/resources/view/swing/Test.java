@@ -1,6 +1,5 @@
-package marvin.demo.view;
+package marvin.app.resources.view.swing;
 
-import com.marvin.bundle.framework.handler.Handler;
 import com.marvin.bundle.swing.resources.view.SwingView;
 import java.awt.Color;
 import java.util.HashMap;
@@ -11,8 +10,8 @@ public class Test extends SwingView {
 
     private JLabel label;
     
-    public Test(Handler handler) {
-        super(handler);
+    public Test(String name) {
+        super(name);
     }
 
     @Override

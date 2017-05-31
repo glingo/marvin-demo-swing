@@ -1,6 +1,6 @@
 package marvin;
 
-import com.marvin.bundle.swing.Application;
+import com.marvin.bundle.swing.SwingApplication;
 import com.marvin.component.kernel.Kernel;
 import java.util.Arrays;
 import javax.swing.JMenu;
@@ -8,7 +8,7 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import marvin.app.AppKernel;
 
-public class DemoApplication extends Application {
+public class DemoApplication extends SwingApplication {
     
     private static final String ENV_PARAMETER_PREFIX = "-env=";
 
@@ -21,7 +21,7 @@ public class DemoApplication extends Application {
                 .filter(arg -> arg.startsWith(ENV_PARAMETER_PREFIX))
                 .findFirst().orElse("-env=dev")
                 .replace(ENV_PARAMETER_PREFIX, "");
-        Application.launch(DemoApplication.class, new AppKernel(env, true));
+        SwingApplication.launch(DemoApplication.class, new AppKernel(env, true));
     }
     
     @Override

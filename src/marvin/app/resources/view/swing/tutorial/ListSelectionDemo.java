@@ -29,7 +29,7 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */ 
 
-package marvin.demo.tutorial;
+package marvin.app.resources.view.swing.tutorial;
 
 /*
  * ListSelectionDemo.java requires no other files.

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
     
-    <import resource="parameters.xml" />
-    <import resource="services.xml" />
+<!--    <import resource="parameters.xml" />
+    <import resource="services.xml" />-->
     
     <framework>
         <router>

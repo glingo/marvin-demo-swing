@@ -1,4 +1,4 @@
-package marvin.demo.tutorial;
+package marvin.app.resources.view.swing.tutorial;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;

@@ -1,4 +1,4 @@
-package marvin.demo;
+package marvin.app.resources.view.swing;
 
 import java.awt.Container;
 import java.awt.event.ActionEvent;

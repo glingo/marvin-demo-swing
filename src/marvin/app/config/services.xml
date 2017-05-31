@@ -8,7 +8,7 @@
     
     <services>
         <service id="home" class="marvin.demo.view.Home">
-            <argument type="service" ref="action_handler" />
+            <argument type="service" ref="handler" />
         </service>
         
 <!--        <service id="home" class="com.marvin.bundle.swing.resources.view.SwingView">
@@ -16,11 +16,11 @@
         </service>-->
         
         <service id="test" class="marvin.demo.view.Test">
-            <argument type="service" ref="action_handler" />
+            <argument type="service" ref="handler" />
         </service>
         
         <service id="login" class="marvin.demo.view.Login">
-            <argument type="service" ref="action_handler" />
+            <argument type="service" ref="handler" />
         </service>
 
     </services>

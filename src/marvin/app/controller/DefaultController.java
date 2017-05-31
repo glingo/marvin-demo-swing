@@ -1,8 +1,8 @@
 package marvin.app.controller;
 
-import com.marvin.bundle.framework.mvc.ModelAndView;
+import com.marvin.component.mvc.ModelAndView;
 import com.marvin.bundle.framework.mvc.controller.Controller;
-import com.marvin.bundle.framework.mvc.model.Model;
+import com.marvin.component.mvc.model.Model;
 import com.marvin.component.form.FormTypeInterface;
 import com.marvin.component.form.support.ButtonType;
 import com.marvin.component.form.support.PasswordType;
@@ -34,7 +34,7 @@ public class DefaultController extends Controller {
             model.remove("loginForm");
             LoginForm data = (LoginForm) form.getData();
             if("Admin".equals(data.getLogin())) {
-                return new ModelAndView("home", model);
+                return ModelAndView.builder().view("home").model(model).build();
             }
         }
         
@@ -47,7 +47,6 @@ public class DefaultController extends Controller {
 
         model.put("loginForm", form);
 
-        ModelAndView mav = new ModelAndView("login", model);
-        return mav;
+        return ModelAndView.builder().view("login").model(model).build();
     }
 }

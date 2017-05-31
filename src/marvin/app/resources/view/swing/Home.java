@@ -1,7 +1,7 @@
-package marvin.demo.view;
+package marvin.app.resources.view.swing;
 
-import com.marvin.bundle.framework.handler.Handler;
 import com.marvin.bundle.swing.resources.view.SwingView;
+import com.marvin.bundle.framework.mvc.Handler;
 import java.util.HashMap;
 import javax.swing.Action;
 import javax.swing.JButton;
@@ -10,8 +10,8 @@ import javax.swing.JFrame;
 public class Home extends SwingView {
     private JButton button;
 
-    public Home(Handler handler) {
-        super(handler);
+    public Home(String name) {
+        super(name);
     }
 
     @Override
